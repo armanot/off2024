@@ -100,7 +100,7 @@ h3 {
 
 /* Splash Screen Styles */
 #splash-screen {
-    position: fixed;
+    position: fixed; /* Ensures it stays in place */
     top: 0;
     left: 0;
     width: 100%;
@@ -109,9 +109,10 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000; /* Ensures it's on top of other elements */
     opacity: 1;
-    transition: opacity 1s ease; /* Transition effect */
+    transition: opacity 1s ease; /* Smooth transition effect */
+    overflow: hidden; /* Ensures no scrollbars appear */
 }
 
 #splash-screen img {
