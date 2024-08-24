@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OFF 2024</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <div id="countdown-container">
+        <h1>Countdown to Family Day Event</h1>
+        <div id="countdown">
+            <div class="time" id="days"></div>
+            <div class="time" id="hours"></div>
+            <div class="time" id="minutes"></div>
+            <div class="time" id="seconds"></div>
+        </div>
+    </div>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="splash-image.jpg" alt="Splash Screen Image">
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Family Day Events</h1>
+        </header>
+        <main>
+            <section class="schedule">
+                <h2>Day 1: Check-in</h2>
+                <p><strong>Check-in Time:</strong> 3:00 PM</p>
+                <p><strong>Rehat dan Solat Asar:</strong> 3:00 - 4.45 PM</p>
+
+                
+                
+                
+                
+                <div class="activity">
+                    <h4 onclick="toggleDetails('activity1-details')">
+                        <i class="fas fa-basketball-ball"></i> Aktiviti-1 [5.00PM - 7.00PM]</h4>
+                    <h6><i>**Person In Charged: Fendi dan Fairus**</i></h6>
+                    <div id="activity1-details" class="activity-details">
+                        <ul>
+                            <li><i class="fa-solid fa-person"></i> Dewasa : </li>
+                            <li><i class="fa-solid fa-child"></i> Kanak-Kanak :</li>
+                            <li><i class="fa-solid fa-person"></i> Dewasa: </li>
+                        </ul>
+                        <P>
+                            <h5>
+                                <i> - Semua ahli keluarga diminta bersedia 
+                                di perkarangan swimming pool 
+                                sebelum jam 5 petang.<br>
+
+                                - Pemenang akan menerima hadiah semasa sesi BBQ</i>
+                                </h5>
+                        </P>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <h4 onclick="toggleDetails('activity2-details')">
+                        <i class="fas fa-paint-brush"> </i>Aktiviti-2 [8.00PM - 11.00PM]</h4>
+                    <div id="activity2-details" class="activity-details">
+                        <ul>
+                            <li><i class="fa-solid fa-utensils"></i> BBQ</li>
+                            <li><i class="fa-solid fa-mask"></i> Pertandingan pakaian Retro</li>
+                            <li><i class="fa-solid fa-dice"></i> Permainan dan Persembahan</li>
+                            <li><i class="fa-solid fa-gifts"></i> Exchange Gifts</li>
+                            <li><i class="fa-solid fa-trophy"></i> Penyampaian Hadiah</li>
+                        </ul>
+                        <P></P>
+                        <h5>Tema untuk Aktiviti-2 ialah RETRO</h5>
+                    </div>
+                </div>
+
+                <P></P>
+
+                <h2>Day 2: Check-out</h2>
+                <p><strong>Check-out Time:</strong> 12:30 PM</p>
+            </section>
+        </main>
+    </div>
+    <script src="countdown.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
