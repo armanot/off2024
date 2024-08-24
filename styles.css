@@ -1,5 +1,5 @@
 /* Basic Reset */
-body, h1, h2, h3, h4, p, ul {
+body, h1, h2, h3, h4, p, ul, h8 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,6 +48,7 @@ body {
     font-size: 0.5em;
     color: #888;
 }
+
 
 header {
     background-color: #ca0929;
@@ -165,4 +166,10 @@ h6 {
     margin-top: 20px;
     color: #0a0a0a;
     font-size: 0.85em;
+}
+
+h8 {
+    font-size: 2em;
+    color: #888;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
 }

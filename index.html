@@ -26,18 +26,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2em;
+            font-size: 1.8em;
         }
         .time {
             margin: 0 10px;
             padding: 20px;
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 6px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .time span {
             display: block;
-            font-size: 0.5em;
+            font-size: 0.4em;
             color: #888;
         }
         /* Styles for splash screen */
@@ -70,7 +70,9 @@
 <body>
     <!-- Countdown Container -->
     <div id="countdown-container">
-        <h1>Countdown to Family Day Event</h1>
+        <h8>Countdown to <br>
+            Othman's Family Day <br>
+            Event</h8>
         <div id="countdown">
             <div class="time" id="days"></div>
             <div class="time" id="hours"></div>
@@ -145,7 +147,7 @@
     <script>
         // Countdown JavaScript
         function updateCountdown() {
-            const eventDate = new Date('August 31, 2024 00:00:00').getTime();
+            const eventDate = new Date('September 07, 2024 00:00:00').getTime();
             const now = new Date().getTime();
             const distance = eventDate - now;
 
@@ -177,8 +179,8 @@
             setTimeout(function() {
                 document.getElementById('splash-screen').style.opacity = '0'; // Fade out splash screen
                 document.getElementById('main-content').style.display = 'block'; // Show main content
-            }, 5000); // 5000 milliseconds = 5 seconds
-        }, 5000); // 5000 milliseconds = 5 seconds
+            }, 10000); // 5000 milliseconds = 5 seconds
+        }, 10000); // 5000 milliseconds = 5 seconds
     </script>
 </body>
 </html>
