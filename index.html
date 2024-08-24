@@ -8,7 +8,7 @@
     <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Additional styles for countdown container */
+        /* Styles for countdown container */
         #countdown-container {
             display: flex;
             flex-direction: column;
@@ -70,9 +70,7 @@
 <body>
     <!-- Countdown Container -->
     <div id="countdown-container">
-        <h8>Countdown to <br>
-            Othman's Family Day <br>
-            Event</h8>
+        <h8>Countdown to <br> Othman's Family Day <br> Event</h8>
         <div id="countdown">
             <div class="time" id="days"></div>
             <div class="time" id="hours"></div>
@@ -136,18 +134,31 @@
                     </div>
                 </div>
 
+                <div class="activity">
+                    <h4 onclick="toggleDetails('activity3-details')">
+                        <i class="fas fa-paint-brush"></i> Aktiviti-3 [7.00PM - 12.00PM]
+                    </h4>
+                    <div id="activity3-details" class="activity-details">
+                        <ul>
+                            <li><i class="fa-solid fa-mug-saucer"></i> Breakfast</li>
+                            <li><i class="fa-solid fa-hand-peace"></i> Free & Easy</li>
+                        </ul>
+                        <p></p>
+                        <h5>Ahli keluarga yang tiada sarapan di Hotel boleh dapatkan sarapan daripada AJK</h5>
+                    </div>
+                </div>
+
                 <h2>Day 2: Check-out</h2>
                 <p><strong>Check-out Time:</strong> 12:30 PM</p>
             </section>
         </main>
     </div>
 
-    
     <script src="script.js"></script>
     <script>
         // Countdown JavaScript
         function updateCountdown() {
-            const eventDate = new Date('September 07, 2024 00:00:00').getTime();
+            const eventDate = new Date('August 31, 2024 00:00:00').getTime();
             const now = new Date().getTime();
             const distance = eventDate - now;
 
@@ -174,13 +185,17 @@
         setTimeout(function() {
             document.getElementById('countdown-container').style.display = 'none'; // Hide countdown
             document.getElementById('splash-screen').style.display = 'block'; // Show splash screen
-            
+
             // Display splash screen for 5 seconds before showing main content
             setTimeout(function() {
                 document.getElementById('splash-screen').style.opacity = '0'; // Fade out splash screen
                 document.getElementById('main-content').style.display = 'block'; // Show main content
-            }, 10000); // 5000 milliseconds = 5 seconds
-        }, 10000); // 5000 milliseconds = 5 seconds
+                // Ensure splash screen is fully hidden after fade
+                setTimeout(function() {
+                    document.getElementById('splash-screen').style.display = 'none';
+                }, 1000); // Match with the opacity transition duration
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }, 5000); // 5000 milliseconds = 5 seconds
     </script>
 </body>
 </html>
