@@ -119,3 +119,15 @@ h3 {
     max-width: 100%;
     height: auto;
 }
+
+h5 {
+    margin-top: 20px;
+    color: #0a0a0a;
+    font-size: 0.75em;
+}
+
+h6 {
+    margin-top: 20px;
+    color: #0a0a0a;
+    font-size: 0.85em;
+}

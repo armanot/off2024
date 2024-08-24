@@ -18,5 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
             splashScreen.style.display = 'none';
             document.getElementById('main-content').style.display = 'block';
         });
-    }, 4000); // Adjust the delay as needed (3000ms = 3 seconds)
+    }, 500); // Adjust the delay as needed (3000ms = 3 seconds)
 });
