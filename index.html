@@ -65,6 +65,17 @@
         #main-content {
             display: none;
         }
+
+        #view-count {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.5em;
+        }
     </style>
 </head>
 <body>
@@ -92,7 +103,7 @@
         <main>
             
                 <h6><i class="fa-solid fa-triangle-exclamation"></i> PERHATIAN : SILA KLIK AKTIVITI UNTUK MAKLUMAT TERPERINCI</h6>
-            
+                
             <section class="schedule">
                 <h2><i class="fa-solid fa-calendar-day"></i> Day 1 [Saturday]</h2>
                 <p><strong> Check-in Time:</strong> 3:00 PM</p>
@@ -168,7 +179,9 @@
                 <p>&nbsp;</p>
                 <h2><i class="fa-solid fa-flag-checkered"></i> BERSURAI</h2>
             </section>
+            
         </main>
+        <div id="view-count">Loading views...</div>
     </div>
 
     <script src="script.js"></script>
@@ -213,6 +226,20 @@
                 }, 1000); // Match with the opacity transition duration
             }, 5500); // 5000 milliseconds = 5 seconds
         }, 5500); // 5000 milliseconds = 5 seconds
+
+
+
+        function updateViewCount() {
+            let viewCount = parseInt(localStorage.getItem('viewCount')) || 0;
+            viewCount++;
+            localStorage.setItem('viewCount', viewCount);
+            document.getElementById('view-count').textContent = `Views: ${viewCount}`;
+        }
+
+        // Update the view count on page load
+        window.onload = function() {
+            updateViewCount();
+        };
     </script>
 </body>
 </html>
