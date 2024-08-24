@@ -156,6 +156,13 @@ h3 {
     height: auto;
 }
 
+h4 {
+    margin-top: 20px;
+    color: #0a0a0a;
+    font-size: 0.85em;
+}
+
+
 h5 {
     margin-top: 20px;
     color: #0a0a0a;
